@@ -12,14 +12,15 @@
 
 - (id) initWithName:(NSString *)itemName {
     if ((self = [super init])) {
-        NSLog(@"Initializing OrderItem object");
-        name = itemName;
+        _name = itemName;
+        NSLog(@"Initializing OrderItem object  %@",_name);
+        //name = itemName;
     }
     return self;
 }
 
 - (void) dealloc {
-    NSLog(@"Deallocating OrderItem object");
+    NSLog(@"Deallocating OrderItem object  %@",self.name);
 }
 
 @end
